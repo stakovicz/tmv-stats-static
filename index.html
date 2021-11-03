@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="robots" content="noindex">
         <title>TMV Stats</title>
-        <style>
+                                        <style>
                 body {
                     height: 100%;
                     width: 100%;
@@ -41,6 +41,7 @@
                 .event {
                     border-bottom: solid 6px rgba(0,141,63,0.5);
                     min-height: 500px;
+                    padding: 20px;
                 }
                 .participation,
                 .pyramid,
@@ -59,15 +60,12 @@
                     height: 400px;
                 }
                 .back .chart {
-                    width: 200px;
-                    height: 200px;
+                    width: 300px;
+                    height: 300px;
+                    margin-bottom: 20px;
                 }
                 .back {
-                    display: flex;
-                    min-height: 240px;
-                }
-                .back > div {
-                    width: 100%;
+                    height: 400px;
                 }
                 .cols {
                     display: flex;
@@ -109,7 +107,6 @@
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 39 ans</li>
-                                        <li>Âge moyen : 54 ans</li>
                                         <li>Âge maximum : 72 ans</li>
                                     </ul>
                                 </div>
@@ -118,7 +115,6 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 28 ans</li>
-                                        <li>Âge moyen : 48 ans</li>
                                         <li>Âge maximum : 68 ans</li>
                                     </ul>
                                 </div>
@@ -127,7 +123,7 @@
                         <script>
                             new Chart(document.getElementById('pyramid_1_1'), {
                                 type: 'bar',
-                                data: {"labels":[71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28],"datasets":[{"label":"Homme ~54ans","data":[[0,0],[0,-1],[0,0],[0,-1],[0,0],[0,0],[0,-1],[0,0],[0,0],[0,-2],[0,0],[0,-1],[0,-4],[0,-2],[0,0],[0,-1],[0,-1],[0,-4],[0,0],[0,-3],[0,-2],[0,-5],[0,-3],[0,-1],[0,-1],[0,-1],[0,0],[0,-1],[0,0],[0,-1],[0,0],[0,0],[0,-1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~48ans","data":[[0,0],[0,0],[0,0],[0,1],[0,1],[0,0],[0,2],[0,0],[0,0],[0,0],[0,1],[0,0],[0,1],[0,0],[0,2],[0,5],[0,0],[0,0],[0,4],[0,2],[0,1],[0,3],[0,1],[0,4],[0,7],[0,3],[0,3],[0,4],[0,6],[0,2],[0,2],[0,3],[0,2],[0,1],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,2]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":7,"details":[{"age_min":39,"age_avg":54,"age_max":72},{"age_min":28,"age_avg":48,"age_max":68}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,-2],[0,-2],[0,-7],[0,-6],[0,-12],[0,-2],[0,-1],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,4],[0,2],[0,11],[0,16],[0,17],[0,4],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":17,"details":[{"age_min":39,"age_max":72},{"age_min":28,"age_max":68}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -150,8 +146,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 9,
-                                            max: -9,
+                                            min: 19,
+                                            max: -19,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -168,8 +164,6 @@
                         <div>
                                                     </div>
 
-                        <div>
-                                                    </div>
                     </div>
 
 
@@ -199,7 +193,6 @@
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 20 ans</li>
-                                        <li>Âge moyen : 44 ans</li>
                                         <li>Âge maximum : 77 ans</li>
                                     </ul>
                                 </div>
@@ -208,7 +201,6 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 23 ans</li>
-                                        <li>Âge moyen : 43 ans</li>
                                         <li>Âge maximum : 67 ans</li>
                                     </ul>
                                 </div>
@@ -217,7 +209,7 @@
                         <script>
                             new Chart(document.getElementById('pyramid_1_2'), {
                                 type: 'bar',
-                                data: {"labels":[76,75,74,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20],"datasets":[{"label":"Homme ~44ans","data":[[0,0],[0,0],[0,0],[0,0],[0,-1],[0,0],[0,-1],[0,-2],[0,-3],[0,-4],[0,-1],[0,-4],[0,-2],[0,-5],[0,-6],[0,-7],[0,-2],[0,-6],[0,-9],[0,-12],[0,-12],[0,-7],[0,-14],[0,-14],[0,-20],[0,-19],[0,-18],[0,-23],[0,-14],[0,-20],[0,-26],[0,-24],[0,-29],[0,-26],[0,-29],[0,-26],[0,-21],[0,-25],[0,-20],[0,-15],[0,-18],[0,-23],[0,-12],[0,-20],[0,-13],[0,-7],[0,-11],[0,-8],[0,-9],[0,-5],[0,-4],[0,-2],[0,-1],[0,-1],[0,0],[0,-2],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~43ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,1],[0,1],[0,1],[0,1],[0,1],[0,0],[0,1],[0,1],[0,2],[0,2],[0,3],[0,5],[0,7],[0,7],[0,5],[0,5],[0,8],[0,7],[0,9],[0,10],[0,7],[0,13],[0,9],[0,8],[0,10],[0,11],[0,6],[0,14],[0,7],[0,4],[0,2],[0,2],[0,3],[0,4],[0,3],[0,7],[0,1],[0,6],[0,6],[0,4],[0,1],[0,5],[0,1],[0,1],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":29,"details":[{"age_min":20,"age_avg":44,"age_max":77},{"age_min":23,"age_avg":43,"age_max":67}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,-1],[0,-14],[0,-26],[0,-59],[0,-94],[0,-134],[0,-101],[0,-59],[0,-13],[0,-3]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,3],[0,4],[0,24],[0,39],[0,51],[0,29],[0,21],[0,12],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":134,"details":[{"age_min":20,"age_max":77},{"age_min":23,"age_max":67}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -240,8 +232,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 31,
-                                            max: -31,
+                                            min: 136,
+                                            max: -136,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -258,8 +250,6 @@
                         <div>
                                                     </div>
 
-                        <div>
-                                                    </div>
                     </div>
 
 
@@ -289,7 +279,6 @@
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 24 ans</li>
-                                        <li>Âge moyen : 42 ans</li>
                                         <li>Âge maximum : 65 ans</li>
                                     </ul>
                                 </div>
@@ -298,7 +287,6 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 24 ans</li>
-                                        <li>Âge moyen : 40 ans</li>
                                         <li>Âge maximum : 65 ans</li>
                                     </ul>
                                 </div>
@@ -307,7 +295,7 @@
                         <script>
                             new Chart(document.getElementById('pyramid_1_3'), {
                                 type: 'bar',
-                                data: {"labels":[64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24],"datasets":[{"label":"Homme ~42ans","data":[[0,-1],[0,0],[0,0],[0,-1],[0,-1],[0,-2],[0,-1],[0,-1],[0,-2],[0,-1],[0,-4],[0,-3],[0,-1],[0,-8],[0,-11],[0,-9],[0,-7],[0,-10],[0,-10],[0,-7],[0,-15],[0,-13],[0,-10],[0,-4],[0,-8],[0,-11],[0,-7],[0,-9],[0,-19],[0,-12],[0,-7],[0,-4],[0,-2],[0,-3],[0,-3],[0,-1],[0,-5],[0,-1],[0,-1],[0,-3],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~40ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,1],[0,0],[0,1],[0,0],[0,1],[0,3],[0,2],[0,2],[0,2],[0,2],[0,3],[0,1],[0,3],[0,2],[0,1],[0,1],[0,2],[0,1],[0,1],[0,2],[0,1],[0,1],[0,1],[0,0],[0,1],[0,2],[0,1],[0,1],[0,1],[0,1],[0,1]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":19,"details":[{"age_min":24,"age_avg":42,"age_max":65},{"age_min":24,"age_avg":40,"age_max":65}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,0],[0,-2],[0,-4],[0,-11],[0,-45],[0,-49],[0,-58],[0,-13],[0,-6],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,1],[0,0],[0,2],[0,8],[0,11],[0,7],[0,5],[0,4],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":58,"details":[{"age_min":24,"age_max":65},{"age_min":24,"age_max":65}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -330,8 +318,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 21,
-                                            max: -21,
+                                            min: 60,
+                                            max: -60,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -348,8 +336,6 @@
                         <div>
                                                     </div>
 
-                        <div>
-                                                    </div>
                     </div>
 
 
@@ -379,7 +365,6 @@
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 22 ans</li>
-                                        <li>Âge moyen : 43 ans</li>
                                         <li>Âge maximum : 67 ans</li>
                                     </ul>
                                 </div>
@@ -388,7 +373,6 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 25 ans</li>
-                                        <li>Âge moyen : 41 ans</li>
                                         <li>Âge maximum : 63 ans</li>
                                     </ul>
                                 </div>
@@ -397,7 +381,7 @@
                         <script>
                             new Chart(document.getElementById('pyramid_1_4'), {
                                 type: 'bar',
-                                data: {"labels":[66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22],"datasets":[{"label":"Homme ~43ans","data":[[0,-2],[0,-2],[0,-2],[0,0],[0,-1],[0,-4],[0,-1],[0,0],[0,-4],[0,-5],[0,-6],[0,-7],[0,-10],[0,-6],[0,-11],[0,-10],[0,-15],[0,-11],[0,-20],[0,-25],[0,-21],[0,-18],[0,-23],[0,-15],[0,-32],[0,-21],[0,-17],[0,-19],[0,-16],[0,-14],[0,-15],[0,-16],[0,-13],[0,-8],[0,-11],[0,-5],[0,-4],[0,-5],[0,-1],[0,-3],[0,-2],[0,-1],[0,-1],[0,0],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~41ans","data":[[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,2],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,2],[0,1],[0,3],[0,2],[0,1],[0,1],[0,0],[0,1],[0,2],[0,0],[0,0],[0,1],[0,1],[0,1],[0,1],[0,1],[0,1],[0,0],[0,1],[0,0],[0,1],[0,1],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":32,"details":[{"age_min":22,"age_avg":43,"age_max":67},{"age_min":25,"age_avg":41,"age_max":63}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,0],[0,-5],[0,-6],[0,-34],[0,-81],[0,-109],[0,-80],[0,-33],[0,-7],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,0],[0,1],[0,3],[0,1],[0,8],[0,4],[0,4],[0,2],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":109,"details":[{"age_min":22,"age_max":67},{"age_min":25,"age_max":63}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -420,8 +404,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 34,
-                                            max: -34,
+                                            min: 111,
+                                            max: -111,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -438,452 +422,6 @@
                         <div>
                                                     </div>
 
-                        <div>
-                                                    </div>
-                    </div>
-
-
-                </div>
-                    </div>
-            <div class="year">
-            <h1>2020</h1>
-
-            
-                <h2>Marche nordique</h2>
-                <div class="event">
-                    <div class="participation">
-                        <h3>Participation 19</h3>
-                        <div class="chart">
-                            <canvas id="participation_2_1"></canvas>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('participation_2_1'), {
-                                type: 'doughnut',
-                                data: {"labels":["Homme 68.42% [13\/19]","Femme 31.58% [6\/19]"],"datasets":[{"data":[13,6],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":19},
-                            });
-                        </script>
-                    </div>
-
-                    <div class="pyramid">
-                        <h3>Pyramide des âges</h3>
-                        <div class="chart">
-                            <canvas id="pyramid_2_1"></canvas>
-                            <div class="cols">
-                                <div>
-                                    <h4>Homme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 52 ans</li>
-                                        <li>Âge moyen : 62 ans</li>
-                                        <li>Âge maximum : 75 ans</li>
-                                    </ul>
-                                </div>
-                                <div>
-
-                                    <h4>Femme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 43 ans</li>
-                                        <li>Âge moyen : 51 ans</li>
-                                        <li>Âge maximum : 61 ans</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('pyramid_2_1'), {
-                                type: 'bar',
-                                data: {"labels":[74,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43],"datasets":[{"label":"Homme ~62ans","data":[[0,0],[0,0],[0,-1],[0,-1],[0,-1],[0,0],[0,0],[0,0],[0,0],[0,-2],[0,0],[0,0],[0,-1],[0,0],[0,-1],[0,-1],[0,-1],[0,0],[0,-1],[0,0],[0,-1],[0,0],[0,-1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~51ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,1],[0,0],[0,0],[0,2],[0,0],[0,0],[0,0],[0,0],[0,1]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":2,"details":[{"age_min":52,"age_avg":62,"age_max":75},{"age_min":43,"age_avg":51,"age_max":61}]},
-
-                                options: {
-                                    indexAxis: 'y',
-                                    plugins: {
-                                        tooltip: {
-                                            callbacks: {
-                                                label: (ttItem) => (Math.abs(ttItem.parsed.x)) // Inverse negatives to positive numbers
-                                            }
-                                        }
-                                    },
-                                    responsive: true,
-                                    legend: {
-                                        position: "bottom",
-                                    },
-                                    scales: {
-                                        y: {
-                                            stacked: true,
-                                            grid: {
-                                                display: false
-                                            }
-                                        },
-                                        x: {
-                                            min: 4,
-                                            max: -4,
-                                            ticks: {
-                                                callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
-                                            }
-                                        }
-                                    }
-                                },
-                            });
-
-                        </script>
-                    </div>
-
-
-                    <div class="back">
-                        <div>
-                                                            <h3>Homme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_males_2_1"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_males_2_1'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[7,6],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_2_1"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_2_1'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[3,3],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-                    </div>
-
-
-                </div>
-            
-                <h2>Trail court</h2>
-                <div class="event">
-                    <div class="participation">
-                        <h3>Participation 248</h3>
-                        <div class="chart">
-                            <canvas id="participation_2_2"></canvas>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('participation_2_2'), {
-                                type: 'doughnut',
-                                data: {"labels":["Homme 74.60% [185\/248]","Femme 25.40% [63\/248]"],"datasets":[{"data":[185,63],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":248},
-                            });
-                        </script>
-                    </div>
-
-                    <div class="pyramid">
-                        <h3>Pyramide des âges</h3>
-                        <div class="chart">
-                            <canvas id="pyramid_2_2"></canvas>
-                            <div class="cols">
-                                <div>
-                                    <h4>Homme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 0 ans</li>
-                                        <li>Âge moyen : 42 ans</li>
-                                        <li>Âge maximum : 72 ans</li>
-                                    </ul>
-                                </div>
-                                <div>
-
-                                    <h4>Femme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 20 ans</li>
-                                        <li>Âge moyen : 41 ans</li>
-                                        <li>Âge maximum : 58 ans</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('pyramid_2_2'), {
-                                type: 'bar',
-                                data: {"labels":[71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0],"datasets":[{"label":"Homme ~42ans","data":[[0,-1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,-1],[0,0],[0,-2],[0,-2],[0,-1],[0,0],[0,0],[0,-1],[0,-2],[0,-2],[0,-1],[0,-1],[0,-6],[0,-3],[0,-7],[0,-7],[0,-12],[0,-9],[0,-7],[0,-9],[0,-10],[0,-3],[0,-4],[0,-9],[0,-9],[0,-5],[0,-8],[0,-6],[0,-6],[0,-12],[0,-6],[0,-2],[0,-6],[0,-3],[0,-5],[0,-3],[0,-5],[0,-2],[0,-1],[0,0],[0,-1],[0,-1],[0,0],[0,-2],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~41ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,2],[0,2],[0,1],[0,0],[0,0],[0,2],[0,3],[0,2],[0,0],[0,2],[0,4],[0,2],[0,4],[0,1],[0,2],[0,2],[0,4],[0,3],[0,5],[0,2],[0,4],[0,2],[0,1],[0,3],[0,0],[0,1],[0,1],[0,2],[0,2],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,2],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":12,"details":[{"age_min":0,"age_avg":42,"age_max":72},{"age_min":20,"age_avg":41,"age_max":58}]},
-
-                                options: {
-                                    indexAxis: 'y',
-                                    plugins: {
-                                        tooltip: {
-                                            callbacks: {
-                                                label: (ttItem) => (Math.abs(ttItem.parsed.x)) // Inverse negatives to positive numbers
-                                            }
-                                        }
-                                    },
-                                    responsive: true,
-                                    legend: {
-                                        position: "bottom",
-                                    },
-                                    scales: {
-                                        y: {
-                                            stacked: true,
-                                            grid: {
-                                                display: false
-                                            }
-                                        },
-                                        x: {
-                                            min: 14,
-                                            max: -14,
-                                            ticks: {
-                                                callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
-                                            }
-                                        }
-                                    }
-                                },
-                            });
-
-                        </script>
-                    </div>
-
-
-                    <div class="back">
-                        <div>
-                                                            <h3>Homme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_males_2_2"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_males_2_2'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[125,60],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_2_2"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_2_2'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[50,13],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-                    </div>
-
-
-                </div>
-            
-                <h2>Trail long duo</h2>
-                <div class="event">
-                    <div class="participation">
-                        <h3>Participation 52</h3>
-                        <div class="chart">
-                            <canvas id="participation_2_3"></canvas>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('participation_2_3'), {
-                                type: 'doughnut',
-                                data: {"labels":["Homme 82.69% [43\/52]","Femme 17.31% [9\/52]"],"datasets":[{"data":[43,9],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":52},
-                            });
-                        </script>
-                    </div>
-
-                    <div class="pyramid">
-                        <h3>Pyramide des âges</h3>
-                        <div class="chart">
-                            <canvas id="pyramid_2_3"></canvas>
-                            <div class="cols">
-                                <div>
-                                    <h4>Homme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 23 ans</li>
-                                        <li>Âge moyen : 41 ans</li>
-                                        <li>Âge maximum : 60 ans</li>
-                                    </ul>
-                                </div>
-                                <div>
-
-                                    <h4>Femme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 35 ans</li>
-                                        <li>Âge moyen : 45 ans</li>
-                                        <li>Âge maximum : 55 ans</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('pyramid_2_3'), {
-                                type: 'bar',
-                                data: {"labels":[59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23],"datasets":[{"label":"Homme ~41ans","data":[[0,0],[0,0],[0,-2],[0,0],[0,0],[0,0],[0,-3],[0,-1],[0,0],[0,0],[0,0],[0,-2],[0,-3],[0,-3],[0,0],[0,-1],[0,0],[0,-3],[0,-1],[0,-1],[0,-3],[0,-3],[0,-3],[0,-1],[0,-2],[0,0],[0,-3],[0,-1],[0,-1],[0,0],[0,-1],[0,0],[0,0],[0,-1],[0,-1],[0,0],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~45ans","data":[[0,0],[0,0],[0,0],[0,0],[0,2],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,1],[0,0],[0,1],[0,1],[0,0],[0,0],[0,0],[0,1],[0,0],[0,1],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":3,"details":[{"age_min":23,"age_avg":41,"age_max":60},{"age_min":35,"age_avg":45,"age_max":55}]},
-
-                                options: {
-                                    indexAxis: 'y',
-                                    plugins: {
-                                        tooltip: {
-                                            callbacks: {
-                                                label: (ttItem) => (Math.abs(ttItem.parsed.x)) // Inverse negatives to positive numbers
-                                            }
-                                        }
-                                    },
-                                    responsive: true,
-                                    legend: {
-                                        position: "bottom",
-                                    },
-                                    scales: {
-                                        y: {
-                                            stacked: true,
-                                            grid: {
-                                                display: false
-                                            }
-                                        },
-                                        x: {
-                                            min: 5,
-                                            max: -5,
-                                            ticks: {
-                                                callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
-                                            }
-                                        }
-                                    }
-                                },
-                            });
-
-                        </script>
-                    </div>
-
-
-                    <div class="back">
-                        <div>
-                                                            <h3>Homme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_males_2_3"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_males_2_3'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[36,7],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_2_3"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_2_3'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[8,1],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-                    </div>
-
-
-                </div>
-            
-                <h2>Trail long</h2>
-                <div class="event">
-                    <div class="participation">
-                        <h3>Participation 218</h3>
-                        <div class="chart">
-                            <canvas id="participation_2_4"></canvas>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('participation_2_4'), {
-                                type: 'doughnut',
-                                data: {"labels":["Homme 95.87% [209\/218]","Femme 4.13% [9\/218]"],"datasets":[{"data":[209,9],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":218},
-                            });
-                        </script>
-                    </div>
-
-                    <div class="pyramid">
-                        <h3>Pyramide des âges</h3>
-                        <div class="chart">
-                            <canvas id="pyramid_2_4"></canvas>
-                            <div class="cols">
-                                <div>
-                                    <h4>Homme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 23 ans</li>
-                                        <li>Âge moyen : 43 ans</li>
-                                        <li>Âge maximum : 70 ans</li>
-                                    </ul>
-                                </div>
-                                <div>
-
-                                    <h4>Femme</h4>
-                                    <ul>
-                                        <li>Âge minimum : 25 ans</li>
-                                        <li>Âge moyen : 41 ans</li>
-                                        <li>Âge maximum : 63 ans</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            new Chart(document.getElementById('pyramid_2_4'), {
-                                type: 'bar',
-                                data: {"labels":[69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23],"datasets":[{"label":"Homme ~43ans","data":[[0,0],[0,0],[0,-1],[0,0],[0,0],[0,-1],[0,0],[0,0],[0,0],[0,-2],[0,-2],[0,-3],[0,0],[0,-2],[0,-2],[0,-3],[0,-6],[0,-2],[0,-8],[0,-7],[0,-5],[0,-8],[0,-13],[0,-13],[0,-9],[0,-13],[0,-7],[0,-15],[0,-11],[0,-8],[0,-11],[0,-5],[0,-4],[0,-10],[0,-5],[0,-8],[0,-2],[0,-3],[0,-6],[0,-2],[0,-5],[0,-3],[0,0],[0,0],[0,-1],[0,0],[0,-2]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~41ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,2],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,1],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":15,"details":[{"age_min":23,"age_avg":43,"age_max":70},{"age_min":25,"age_avg":41,"age_max":63}]},
-
-                                options: {
-                                    indexAxis: 'y',
-                                    plugins: {
-                                        tooltip: {
-                                            callbacks: {
-                                                label: (ttItem) => (Math.abs(ttItem.parsed.x)) // Inverse negatives to positive numbers
-                                            }
-                                        }
-                                    },
-                                    responsive: true,
-                                    legend: {
-                                        position: "bottom",
-                                    },
-                                    scales: {
-                                        y: {
-                                            stacked: true,
-                                            grid: {
-                                                display: false
-                                            }
-                                        },
-                                        x: {
-                                            min: 17,
-                                            max: -17,
-                                            ticks: {
-                                                callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
-                                            }
-                                        }
-                                    }
-                                },
-                            });
-
-                        </script>
-                    </div>
-
-
-                    <div class="back">
-                        <div>
-                                                            <h3>Homme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_males_2_4"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_males_2_4'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[160,49],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
-
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_2_4"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_2_4'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[7,2],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
                     </div>
 
 
@@ -898,10 +436,10 @@
                     <div class="participation">
                         <h3>Participation 60</h3>
                         <div class="chart">
-                            <canvas id="participation_3_1"></canvas>
+                            <canvas id="participation_2_1"></canvas>
                         </div>
                         <script>
-                            new Chart(document.getElementById('participation_3_1'), {
+                            new Chart(document.getElementById('participation_2_1'), {
                                 type: 'doughnut',
                                 data: {"labels":["Homme 40.00% [24\/60]","Femme 60.00% [36\/60]"],"datasets":[{"data":[24,36],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":60},
                             });
@@ -911,13 +449,12 @@
                     <div class="pyramid">
                         <h3>Pyramide des âges</h3>
                         <div class="chart">
-                            <canvas id="pyramid_3_1"></canvas>
+                            <canvas id="pyramid_2_1"></canvas>
                             <div class="cols">
                                 <div>
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 46 ans</li>
-                                        <li>Âge moyen : 58 ans</li>
                                         <li>Âge maximum : 75 ans</li>
                                     </ul>
                                 </div>
@@ -926,16 +463,15 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 35 ans</li>
-                                        <li>Âge moyen : 46 ans</li>
                                         <li>Âge maximum : 60 ans</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <script>
-                            new Chart(document.getElementById('pyramid_3_1'), {
+                            new Chart(document.getElementById('pyramid_2_1'), {
                                 type: 'bar',
-                                data: {"labels":[74,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35],"datasets":[{"label":"Homme ~58ans","data":[[0,0],[0,0],[0,-1],[0,-1],[0,-1],[0,0],[0,0],[0,-1],[0,-1],[0,-1],[0,0],[0,-1],[0,-1],[0,0],[0,-1],[0,-1],[0,-2],[0,0],[0,-1],[0,-1],[0,-2],[0,0],[0,-1],[0,-1],[0,-1],[0,0],[0,-1],[0,-1],[0,-2],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~46ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,2],[0,0],[0,0],[0,0],[0,1],[0,1],[0,0],[0,1],[0,2],[0,0],[0,2],[0,3],[0,0],[0,2],[0,5],[0,1],[0,4],[0,3],[0,1],[0,2],[0,1],[0,0],[0,2],[0,0],[0,1],[0,2]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":5,"details":[{"age_min":46,"age_avg":58,"age_max":75},{"age_min":35,"age_avg":46,"age_max":60}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,-3],[0,-3],[0,-4],[0,-4],[0,-4],[0,0],[0,0],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,0],[0,2],[0,3],[0,7],[0,11],[0,5],[0,0],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":11,"details":[{"age_min":46,"age_max":75},{"age_min":35,"age_max":60}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -958,8 +494,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 7,
-                                            max: -7,
+                                            min: 13,
+                                            max: -13,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -974,30 +510,18 @@
 
                     <div class="back">
                         <div>
-                                                            <h3>Homme qui revient ?</h3>
+                                                            <h3>Qui revient ?</h3>
                                 <div class="chart">
-                                    <canvas id="back_males_3_1"></canvas>
+                                    <canvas id="back_2_1"></canvas>
                                 </div>
                                 <script>
-                                    new Chart(document.getElementById('back_males_3_1'), {
+                                    new Chart(document.getElementById('back_2_1'), {
                                         type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[15,9],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
+                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[42,18],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
                                     });
                                 </script>
                                                     </div>
 
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_3_1"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_3_1'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[35,1],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
                     </div>
 
 
@@ -1008,10 +532,10 @@
                     <div class="participation">
                         <h3>Participation 598</h3>
                         <div class="chart">
-                            <canvas id="participation_3_2"></canvas>
+                            <canvas id="participation_2_2"></canvas>
                         </div>
                         <script>
-                            new Chart(document.getElementById('participation_3_2'), {
+                            new Chart(document.getElementById('participation_2_2'), {
                                 type: 'doughnut',
                                 data: {"labels":["Homme 78.60% [470\/598]","Femme 21.40% [128\/598]"],"datasets":[{"data":[470,128],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":598},
                             });
@@ -1021,13 +545,12 @@
                     <div class="pyramid">
                         <h3>Pyramide des âges</h3>
                         <div class="chart">
-                            <canvas id="pyramid_3_2"></canvas>
+                            <canvas id="pyramid_2_2"></canvas>
                             <div class="cols">
                                 <div>
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 18 ans</li>
-                                        <li>Âge moyen : 42 ans</li>
                                         <li>Âge maximum : 72 ans</li>
                                     </ul>
                                 </div>
@@ -1036,16 +559,15 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 20 ans</li>
-                                        <li>Âge moyen : 42 ans</li>
                                         <li>Âge maximum : 67 ans</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <script>
-                            new Chart(document.getElementById('pyramid_3_2'), {
+                            new Chart(document.getElementById('pyramid_2_2'), {
                                 type: 'bar',
-                                data: {"labels":[71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18],"datasets":[{"label":"Homme ~42ans","data":[[0,0],[0,-2],[0,0],[0,-1],[0,-3],[0,-2],[0,-1],[0,-1],[0,-1],[0,-3],[0,-1],[0,-2],[0,-1],[0,-1],[0,-5],[0,-5],[0,-7],[0,-8],[0,-10],[0,-10],[0,-13],[0,-16],[0,-19],[0,-17],[0,-16],[0,-20],[0,-19],[0,-24],[0,-20],[0,-19],[0,-24],[0,-20],[0,-25],[0,-14],[0,-16],[0,-15],[0,-19],[0,-13],[0,-13],[0,-8],[0,-6],[0,-7],[0,-6],[0,-7],[0,-5],[0,-7],[0,-1],[0,-3],[0,-2],[0,-3],[0,-3],[0,0],[0,-1],[0,-4]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~42ans","data":[[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,2],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,1],[0,0],[0,1],[0,3],[0,1],[0,2],[0,1],[0,3],[0,1],[0,7],[0,4],[0,6],[0,6],[0,9],[0,12],[0,7],[0,5],[0,5],[0,4],[0,5],[0,6],[0,3],[0,3],[0,1],[0,3],[0,7],[0,2],[0,3],[0,0],[0,1],[0,2],[0,2],[0,1],[0,0],[0,3],[0,1],[0,1],[0,1],[0,1],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":25,"details":[{"age_min":18,"age_avg":42,"age_max":72},{"age_min":20,"age_avg":42,"age_max":67}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,-1],[0,-7],[0,-8],[0,-35],[0,-81],[0,-106],[0,-89],[0,-40],[0,-18],[0,-8]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,3],[0,1],[0,7],[0,21],[0,38],[0,18],[0,13],[0,7],[0,2]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":106,"details":[{"age_min":18,"age_max":72},{"age_min":20,"age_max":67}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -1068,8 +590,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 27,
-                                            max: -27,
+                                            min: 108,
+                                            max: -108,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -1084,30 +606,18 @@
 
                     <div class="back">
                         <div>
-                                                            <h3>Homme qui revient ?</h3>
+                                                            <h3>Qui revient ?</h3>
                                 <div class="chart">
-                                    <canvas id="back_males_3_2"></canvas>
+                                    <canvas id="back_2_2"></canvas>
                                 </div>
                                 <script>
-                                    new Chart(document.getElementById('back_males_3_2'), {
+                                    new Chart(document.getElementById('back_2_2'), {
                                         type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[413,57],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
+                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[465,133],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
                                     });
                                 </script>
                                                     </div>
 
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_3_2"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_3_2'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[118,10],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
                     </div>
 
 
@@ -1118,10 +628,10 @@
                     <div class="participation">
                         <h3>Participation 122</h3>
                         <div class="chart">
-                            <canvas id="participation_3_3"></canvas>
+                            <canvas id="participation_2_3"></canvas>
                         </div>
                         <script>
-                            new Chart(document.getElementById('participation_3_3'), {
+                            new Chart(document.getElementById('participation_2_3'), {
                                 type: 'doughnut',
                                 data: {"labels":["Homme 82.79% [101\/122]","Femme 17.21% [21\/122]"],"datasets":[{"data":[101,21],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":122},
                             });
@@ -1131,13 +641,12 @@
                     <div class="pyramid">
                         <h3>Pyramide des âges</h3>
                         <div class="chart">
-                            <canvas id="pyramid_3_3"></canvas>
+                            <canvas id="pyramid_2_3"></canvas>
                             <div class="cols">
                                 <div>
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 24 ans</li>
-                                        <li>Âge moyen : 41 ans</li>
                                         <li>Âge maximum : 59 ans</li>
                                     </ul>
                                 </div>
@@ -1146,16 +655,15 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 26 ans</li>
-                                        <li>Âge moyen : 39 ans</li>
                                         <li>Âge maximum : 51 ans</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <script>
-                            new Chart(document.getElementById('pyramid_3_3'), {
+                            new Chart(document.getElementById('pyramid_2_3'), {
                                 type: 'bar',
-                                data: {"labels":[58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24],"datasets":[{"label":"Homme ~41ans","data":[[0,-1],[0,-1],[0,0],[0,0],[0,-3],[0,-2],[0,0],[0,-2],[0,-4],[0,-3],[0,0],[0,-6],[0,-4],[0,-5],[0,-5],[0,-4],[0,-6],[0,-3],[0,-4],[0,-9],[0,-3],[0,-4],[0,-3],[0,-7],[0,-4],[0,-6],[0,-4],[0,-1],[0,-3],[0,-1],[0,-1],[0,0],[0,0],[0,0],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~39ans","data":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,1],[0,0],[0,0],[0,1],[0,0],[0,3],[0,0],[0,0],[0,1],[0,1],[0,1],[0,1],[0,1],[0,3],[0,0],[0,1],[0,1],[0,2],[0,1],[0,1],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":9,"details":[{"age_min":24,"age_avg":41,"age_max":59},{"age_min":26,"age_avg":39,"age_max":51}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,0],[0,0],[0,-1],[0,-6],[0,-15],[0,-23],[0,-26],[0,-15],[0,-1],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,0],[0,0],[0,0],[0,3],[0,5],[0,6],[0,4],[0,1],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":26,"details":[{"age_min":24,"age_max":59},{"age_min":26,"age_max":51}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -1178,8 +686,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 11,
-                                            max: -11,
+                                            min: 28,
+                                            max: -28,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -1194,30 +702,18 @@
 
                     <div class="back">
                         <div>
-                                                            <h3>Homme qui revient ?</h3>
+                                                            <h3>Qui revient ?</h3>
                                 <div class="chart">
-                                    <canvas id="back_males_3_3"></canvas>
+                                    <canvas id="back_2_3"></canvas>
                                 </div>
                                 <script>
-                                    new Chart(document.getElementById('back_males_3_3'), {
+                                    new Chart(document.getElementById('back_2_3'), {
                                         type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[95,6],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
+                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[103,19],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
                                     });
                                 </script>
                                                     </div>
 
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_3_3"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_3_3'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[21,0],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
                     </div>
 
 
@@ -1228,10 +724,10 @@
                     <div class="participation">
                         <h3>Participation 214</h3>
                         <div class="chart">
-                            <canvas id="participation_3_4"></canvas>
+                            <canvas id="participation_2_4"></canvas>
                         </div>
                         <script>
-                            new Chart(document.getElementById('participation_3_4'), {
+                            new Chart(document.getElementById('participation_2_4'), {
                                 type: 'doughnut',
                                 data: {"labels":["Homme 93.46% [200\/214]","Femme 6.54% [14\/214]"],"datasets":[{"data":[200,14],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}],"total":214},
                             });
@@ -1241,13 +737,12 @@
                     <div class="pyramid">
                         <h3>Pyramide des âges</h3>
                         <div class="chart">
-                            <canvas id="pyramid_3_4"></canvas>
+                            <canvas id="pyramid_2_4"></canvas>
                             <div class="cols">
                                 <div>
                                     <h4>Homme</h4>
                                     <ul>
                                         <li>Âge minimum : 23 ans</li>
-                                        <li>Âge moyen : 41 ans</li>
                                         <li>Âge maximum : 64 ans</li>
                                     </ul>
                                 </div>
@@ -1256,16 +751,15 @@
                                     <h4>Femme</h4>
                                     <ul>
                                         <li>Âge minimum : 25 ans</li>
-                                        <li>Âge moyen : 38 ans</li>
                                         <li>Âge maximum : 63 ans</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <script>
-                            new Chart(document.getElementById('pyramid_3_4'), {
+                            new Chart(document.getElementById('pyramid_2_4'), {
                                 type: 'bar',
-                                data: {"labels":[63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23],"datasets":[{"label":"Homme ~41ans","data":[[0,0],[0,-1],[0,-1],[0,-1],[0,0],[0,-2],[0,-1],[0,-1],[0,0],[0,-1],[0,-2],[0,-5],[0,-3],[0,-8],[0,-4],[0,-3],[0,-9],[0,-9],[0,-5],[0,-15],[0,-7],[0,-11],[0,-12],[0,-8],[0,-12],[0,-8],[0,-3],[0,-9],[0,-14],[0,-6],[0,-8],[0,-10],[0,-3],[0,-2],[0,-6],[0,-2],[0,-1],[0,-2],[0,-2],[0,-1],[0,-1]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme ~38ans","data":[[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,1],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,1],[0,1],[0,2],[0,1],[0,0],[0,0],[0,0],[0,1],[0,0],[0,0],[0,0],[0,2],[0,0],[0,1],[0,1],[0,0],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":15,"details":[{"age_min":23,"age_avg":41,"age_max":64},{"age_min":25,"age_avg":38,"age_max":63}]},
+                                data: {"labels":["70-75","64-69","58-63","52-57","46-51","40-45","34-39","28-33","22-27","16-21"],"datasets":[{"label":"Homme","data":[[0,0],[0,0],[0,-3],[0,-5],[0,-27],[0,-50],[0,-46],[0,-29],[0,-7],[0,0]],"backgroundColor":["rgba(0,141,63,0.5)"]},{"label":"Femme","data":[[0,0],[0,0],[0,1],[0,0],[0,2],[0,1],[0,5],[0,1],[0,2],[0,0]],"backgroundColor":["rgba(127,0,127,0.5)"]}],"min":0,"max":50,"details":[{"age_min":23,"age_max":64},{"age_min":25,"age_max":63}]},
 
                                 options: {
                                     indexAxis: 'y',
@@ -1288,8 +782,8 @@
                                             }
                                         },
                                         x: {
-                                            min: 17,
-                                            max: -17,
+                                            min: 52,
+                                            max: -52,
                                             ticks: {
                                                 callback: (val) => (Math.abs(val)) // Inverrt negatives to positive numbers
                                             }
@@ -1304,30 +798,18 @@
 
                     <div class="back">
                         <div>
-                                                            <h3>Homme qui revient ?</h3>
+                                                            <h3>Qui revient ?</h3>
                                 <div class="chart">
-                                    <canvas id="back_males_3_4"></canvas>
+                                    <canvas id="back_2_4"></canvas>
                                 </div>
                                 <script>
-                                    new Chart(document.getElementById('back_males_3_4'), {
+                                    new Chart(document.getElementById('back_2_4'), {
                                         type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[151,49],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
+                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[166,48],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
                                     });
                                 </script>
                                                     </div>
 
-                        <div>
-                                                            <h3>Femme qui revient ?</h3>
-                                <div class="chart">
-                                    <canvas id="back_females_3_4"></canvas>
-                                </div>
-                                <script>
-                                    new Chart(document.getElementById('back_females_3_4'), {
-                                        type: 'pie',
-                                        data: {"labels":["Nouveaux","Revenants"],"datasets":[{"data":[9,5],"backgroundColor":["rgba(0,141,63,0.5)","rgba(127,0,127,0.5)"],"borderColor":["rgba(0,141,63,1)","rgba(127,0,127,1)"],"borderWidth":3}]},
-                                    });
-                                </script>
-                                                    </div>
                     </div>
 
 
